@@ -25,16 +25,37 @@ function multiply () {
 
 //#### BONUS ####
 
-// 11. Write a function called 'convertArrayToAnObject' that turns an array (with an even number of elements) into a hash, by
+// 11. Write a function called 'convertArrayToAnObject' that turns an array (with an even number of elements) into a object, by
 // pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 // {'a' => 'b', 'c' => 'd'}
+// ------------- ATTEMPT 1 ---------------
 // function convertArrayToAnObject (arr) {
 //   obj = {};
-//   for (var i = 0; i < arr.length; i+=2) {
-//
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 1) {
+//     }
 //   }
 //   return obj;
 // }
+// ------------ ATTEMPT 2 ---------------
+// function convertArrayToAnObject (arr) {
+//   var obj = {};
+//   arr.forEach(function(item, index) {
+//     if (index % 2 === 0) {
+//       obj[item] = arr[index + 1]
+//     }
+//   })
+//   return obj;
+// }
+// ------------ ATTEMPT 3 ---------------
+function convertArrayToAnObject (arr) {
+  var obj = {};
+  for(var i = 0; i < arr.length; i+=2) {
+    obj[arr[i]] = (arr[i+1]);
+  }
+  console.log(obj);
+  return obj;
+}
 
 
 // 12. Write a function called 'fizzBuzz' that takes any number and returns a value based on these rules
