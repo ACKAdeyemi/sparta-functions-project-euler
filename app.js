@@ -84,10 +84,13 @@ function fizzBuzz (value) {
 // ------------ ATTEMPT 2 --------------
 var num1 = 0;
 var num2 = 0;
+var num3 = 0;
 var arr1 = [];
 var arr2 = [];
+var arr3 = [];
 var sum1 = 0;
 var sum2 = 0;
+var sum3 = 0;
 
 for (var i = 0; i < 1000; i+=3) {
   arr1[i] = num1 + i;
@@ -99,6 +102,11 @@ for (var j = 0; j < 1000; j+=5) {
   sum2+=arr2[j];
   // console.log(sum2);
 }
-var total = sum1 + sum2;
+for (var k = 0; k < 1000; k+=15) {
+  arr3[k] = num3 + k;
+  sum3+=arr3[k];
+  // console.log(sum2);
+}
+var total = (sum1+sum2)-sum3;
 console.log(`This is the total: ${total}`);
 // Answer is 266333
